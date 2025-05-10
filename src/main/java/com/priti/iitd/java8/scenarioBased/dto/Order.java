@@ -9,11 +9,20 @@ public class Order {
     private double totalValue;
     private LocalDateTime orderTime;
 
+    public Order() {
+    }
+
     public Order(List<Product> products, double totalValue, LocalDateTime orderTime) {
         this.products = products;
         this.totalValue = totalValue;
         this.orderTime = orderTime;
     }
+
+    public Order(String orderId, List<Product> products) {
+        this.orderId = orderId;
+        this.products = products;
+    }
+
 
     public String getOrderId() {
         return orderId;
